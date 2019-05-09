@@ -3,10 +3,11 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 const userCard = props =>
   props.user ? (
-    <div className="card person" style={{ width: "18rem" }}>
+    <div className="card person">
       <img
         className="img-fluid"
-        src={`https://picsum.photos/300/200?id=${Math.random()}`}
+        src={`https://picsum.photos/300/160?id=${props.user.id}`}
+        height="160"
         alt=""
       />
       <div className="card-body">

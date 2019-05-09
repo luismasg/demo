@@ -18,7 +18,7 @@ function Sidebar(props) {
           <a
             href={`/${user.id}`}
             className={`list-group-item ${
-              user.username === props.match.params.user ? "active" : ""
+              user.id === Number(props.match.params.user) ? "active" : ""
             }`}
             key={user.username}
           >

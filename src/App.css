@@ -2,34 +2,58 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: url(https://learnnode.com/images/NODE/pattern.svg);
 }
 header {
-  height: 200px;
+  height: 70px;
   /* border: 1px solid red; */
-  background-color: darkslategrey;
+  background-color: #563d7c;
   text-align: center;
   padding: 20px;
   color: white;
+
+  background: #563d7c url(https://learnnode.com/images/topographic-pattern.png)
+    0% 0% / 150px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+section {
+  position: relative;
 }
 main {
   padding: 20px;
   flex: 1;
   /* border: 1px solid blue; */
   display: grid;
-  grid-template: 1fr / 1fr 3fr;
+
   grid-gap: 20px;
 }
+@media (min-width: 520px) {
+  main {
+    grid-template: 1fr / 1fr 3fr;
+  }
+}
 footer {
-  height: 200px;
+  height: 70px;
   /* border: 1px solid red; */
-  background-color: darkslategrey;
+  background-color: #563d7c;
   text-align: center;
   padding: 20px;
   color: white;
+  background: #563d7c url(https://learnnode.com/images/topographic-pattern.png)
+    0% 0% / 150px;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 -3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .postsCard {
   margin: 10px 0;
+  color: white;
+  background: url(https://learnnode.com/images/pattern.png) fixed
+    rgb(255, 198, 0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  text-shadow: black 1px 1px;
+}
+.postsCard .card-title {
+  text-transform: uppercase;
 }
 
 section > h2 {
@@ -38,4 +62,22 @@ section > h2 {
 .card.person {
   display: flex;
   width: 320px !important;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.09' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+@media (max-width: 520px) {
+  .card.person {
+    width: 100% !important;
+  }
+}
+
+.card.person .card-link {
+  border: 1px solid #007bff;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+header h2 {
+  text-shadow: black 1px 3px 2px;
 }

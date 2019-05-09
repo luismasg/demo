@@ -10,6 +10,7 @@ class App extends React.Component {
   state = { users: [], posts: [] };
 
   async componentDidMount() {
+    if (!this.props.match.params.user) this.props.history.push("/1");
     const users = await this.fetchUsers();
     const posts = await this.fetchPosts(users);
     this.setState({ users, posts });
@@ -30,11 +31,10 @@ class App extends React.Component {
   };
 
   render() {
-    console.log("match : ", this.props.match.params.user);
     return (
       <>
         <header>
-          <h2>Lista de Usuarios </h2>
+          <h2>Lista de usuarios </h2>
         </header>
         <main className="container">
           <nav>
